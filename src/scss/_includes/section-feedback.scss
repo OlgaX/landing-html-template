@@ -1,0 +1,27 @@
+.feedback {
+  background: linear-gradient(to bottom, color(background, primary), color(background, secondary));
+  &__icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    padding-top: 17px;
+    border: 2px solid;
+    border-radius: 100%;
+    font-size: 22px;
+    text-align: center;
+  }
+  &__input {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 4px 0 0 4px !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    &::placeholder {
+      color: #d9d9d9;
+      font-size: .875rem;
+    }
+  }
+}
+

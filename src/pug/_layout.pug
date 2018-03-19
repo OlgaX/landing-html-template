@@ -1,0 +1,55 @@
+-
+    var GTM_ID = 'GTM-0000000'
+    var TITLE = 'Add here page title'
+    var DESCRIPTION = 'Add here page description'
+    var URL = 'https://sitename.com'
+    var SITE_NAME = 'SITE NAME'
+
+doctype html
+html
+    head
+        // Google Tag Manager
+        script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer', '#{GTM_ID}');
+        // End Google Tag Manager
+
+        meta(charset="utf-8")
+
+        title #{TITLE}
+        meta(name="description" content=DESCRIPTION)
+
+        meta(property="og:title", content=TITLE)
+        meta(property="og:type", content="website")
+        meta(property="og:url", content=URL)
+        meta(property="og:site_name", content=SITE_NAME)
+        meta(property="og:description", content=DESCRIPTION)
+
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+        link(rel="icon", href="/favicon.ico", type="image/x-icon")
+
+        link(rel="stylesheet", href='//fonts.googleapis.com/css?family=Montserrat:400,700')
+        link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+        link(rel="stylesheet", href="css/styles.min.css")
+    body
+        // Google Tag Manager (noscript)
+        noscript
+            iframe(src="https://www.googletagmanager.com/ns.html?id=" + GTM_ID,
+            height="0", width="0", style="display:none;visibility:hidden")
+        //End Google Tag Manager (noscript)
+        .site-container
+            block content
+
+        //SCRIPTS
+        script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script(src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js")
+        script(src="//cdnjs.cloudflare.com/ajax/libs/jarallax/1.9.3/jarallax.min.js")
+        script(src="//cdnjs.cloudflare.com/ajax/libs/jarallax/1.9.3/jarallax-element.min.js")
+        script(src="js/scripts.min.js")

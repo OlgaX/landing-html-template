@@ -1,0 +1,63 @@
+$height: 50px;
+
+.site-header {
+  line-height: $height;
+  padding: 5px 0;
+  background-color: color(background, secondary);
+  transition: top 0.4s;
+  &--fixed{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+// LOGOs
+.logo {
+  height: $height;
+  display: block;
+  &--left {
+    width: 90px;
+  }
+  &--right {
+    width: 120px;
+  }
+  &__img {
+    max-height: 100%;
+  }
+  @include media-width(lg) {
+    &--left {
+      width: 120px;
+    }
+    &--right {
+      width: 150px;
+    }
+  }
+}
+
+// NAV
+.nav {
+  display: block;
+  margin: 5px 0 0 0;
+  padding: 10px 0;
+  font-size: .875rem;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  &__item {
+    list-style: none;
+    display: inline-block;
+    line-height: 1.25;
+    max-width: 33%;
+    margin: 5px;
+  }
+  @include media-width(lg) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: inherit;
+  }
+}

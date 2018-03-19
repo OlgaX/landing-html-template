@@ -1,0 +1,30 @@
+-
+    var FEATURES = [
+        {
+            title: 'App Feature One Here',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+            'Aliquam viverra orci ut est facilisis, euelementum mi volutpat. Pellentesque ac tristique nisi.'
+        },
+        {
+            title: 'App Feature Two Here',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+            'Aliquam viverra orci ut est facilisis, euelementum mi volutpat. Pellentesque ac tristique nisi.'
+        },
+        {
+            title: 'App Feature Three Here',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+            'Aliquam viverra orci ut est facilisis, euelementum mi volutpat. Pellentesque ac tristique nisi.'
+        }
+    ]
+
+// FEATURES
+section.features.screen#features
+    .screen__inner
+        .container
+            .row
+                each feature, index in FEATURES
+                    .col-md-4
+                        .features__item.wow.fadeInUp(data-wow-delay=(index + 1) * 0.5 + "s")
+                            hr.features__item-line(class="features__item-line--" + (index + 1), data-jarallax-element="-90")
+                            h3(data-jarallax-element="-80") !{feature.title}
+                            p(data-jarallax-element="-60") !{feature.desc}

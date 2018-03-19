@@ -1,0 +1,23 @@
+-
+    var NAV = {
+        info_block: "Info Block", //id: title
+        features: "Features",
+        pricing: "Pricing",
+        feedback: "Feedback"
+    }
+
+// HEADER
+header#header.site-header
+    .container
+        .row
+            .col-6.col-lg-3
+                a.logo.logo--left(href="/")
+                    img.logo__img(src="img/logo.png", alt="DIGITAL PUMB Logo")
+            .order-last.col-lg-6.order-lg-0
+                ul#nav.nav
+                    each item, key in NAV
+                        li.nav__item
+                            a(href="#"+key).nav__link #{item}
+            .col-6.col-lg-3
+                a.logo.logo--right.pull-right(href="#")
+                    img.logo__img(src="img/logo-affiliate.svg", alt="AFFILIATE Logo")

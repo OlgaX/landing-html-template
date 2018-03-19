@@ -1,0 +1,57 @@
+.btn {
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: all 0.35s ease-in-out;
+  padding: 1rem 1.2rem;
+  font-size: .875rem;
+}
+
+.btn-wide {
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: color(buttons, primary, background);
+  color: color(buttons, primary, text);
+  &:hover, &:focus, &:active, &.active {
+    background-color: color(buttons, primary, background-hover);
+    color: color(buttons, primary, text-hover);
+  }
+}
+
+.btn-secondary {
+  background-color: color(buttons, secondary, background);
+  color: color(buttons, secondary, text);
+  &:hover, &:focus, &:active, &.active {
+    background-color: color(buttons, secondary, background-hover);
+    color: color(buttons, secondary, text-hover);
+  }
+}
+
+//SCROLL-TOP
+.scroll-button {
+  $size: 40px;
+  position: fixed;
+  z-index: 5;
+  right: 20px;
+  bottom: 60px;
+  width: $size;
+  height: $size;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, .5);
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.5;
+  border-radius: 4px;
+  &:hover, &:active, &:focus {
+    opacity: 1;
+  }
+  &:before {
+    content: "\f106";
+    font: 2rem/#{$size} 'FontAwesome';
+  }
+}

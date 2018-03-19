@@ -1,0 +1,47 @@
+-
+    var PRICING = [
+        {
+            title: 'Personal',
+            price: '5',
+            desc: '2 row section for you package information. You can include all details or icons',
+            features: ['Up To 25 Projects', '10GB Storage', 'Other info']
+        },
+        {
+            title: 'Professional',
+            price: '12',
+            desc: '2 row section for you package information. You can include all details or icons',
+            features: ['Up To 25 Projects', '10GB Storage', 'Other info', 'Other info']
+        },
+        {
+            title: 'Business',
+            price: '24',
+            desc: '2 row section for you package information. You can include all details or icons',
+            features: ['Up To 25 Projects', '10GB Storage', 'Other info']
+        }
+    ]
+
+// PRICING
+section.pricing.screen.jarallax#pricing
+    .screen__inner
+        .container
+            .row
+                .col-sm-8.offset-sm-2.mb-5
+                    h2.section-title.pricing__title(data-jarallax-element="-70") Pricing
+                    p.section-desc.pricing__desc(data-jarallax-element="-50") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut.
+
+            .row
+                each item, index in PRICING
+                    .col-md-4
+                        .pricing__item.wow.fadeInUp(class=index == 1 ? 'pricing__item--active' : '')
+                            .pricing__item-header
+                                .pricing__item-title !{item.title}
+                                .pricing__item-price
+                                    span.pricing__item-price-value $!{item.price}
+                                    | /m
+                            ul.pricing__list
+                                li.pricing__list-item.pricing__item-desc !{item.desc}
+
+                                each feature in item.features
+                                    li.pricing__list-item.pricing__item-feature !{feature}
+
+                            a(href="#").pricing__item-btn.btn.btn-primary.btn-wide Get Started

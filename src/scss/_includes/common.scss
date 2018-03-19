@@ -1,0 +1,48 @@
+html {
+  font-size: 15px;
+  @include media-width(sm) {
+    font-size: 17px;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.33;
+  color: color(text);
+  background: color(background, secondary);
+  min-width: 290px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.site-container {
+  background: color(background, primary);
+}
+
+.screen {
+  padding: 60px 0;
+  @include media-width(md) {
+    padding: 40px 0;
+    height: 100vh;
+    &__inner {
+      display: flex;
+      align-items: center;
+      min-height: 100%;
+    }
+  }
+  @media (max-height: 640px) {
+    margin-bottom: 0 !important;
+    height: auto !important;
+    [data-jarallax-element] {
+      transform: none !important;
+    }
+  }
+}
+
+::selection {
+  background: #231f20;
+  color: #fff;
+}

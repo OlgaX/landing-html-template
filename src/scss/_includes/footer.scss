@@ -1,0 +1,51 @@
+.site-footer {
+  background-color: color(background, secondary);
+  padding: 20px 0;
+}
+
+// SOCIAL-LINKS
+.social-links {
+  margin-bottom: 15px;
+  text-align: center;
+  &__title {
+    margin-bottom: 5px;
+  }
+  &__list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    display: inline-block;
+    list-style: none;
+    margin: 5px;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  &__link {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+  @include media-width(md) {
+    text-align: left;
+    &__title {
+      display: inline-block;
+      margin: 0 10px 0 0;
+    }
+    &__item {
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+//COPYRIGHT
+.copyright {
+  font-size: 0.875rem;
+  text-align: center;
+  &__link {
+    font-weight: 700;
+  }
+  @include media-width(md) {
+    text-align: right;
+  }
+}

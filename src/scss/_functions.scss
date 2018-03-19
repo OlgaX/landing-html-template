@@ -1,0 +1,10 @@
+// retrieve color from $colors map ie. `color(buttons, primary, background)`
+@function color($color-name, $color-variant:null, $color-variant-name:null) {
+  @if ($color-variant-name != null) {
+    @return map_get(map-get(map-get($colors, $color-name), $color-variant), $color-variant-name);
+  } @else if ($color-variant != null) {
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  } @else {
+    @return map-get($colors, $color-name);
+  }
+}

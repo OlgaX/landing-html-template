@@ -1,0 +1,15 @@
+.features {
+  margin-bottom: -10%;
+  &__item-line {
+    border: 2px solid;
+    &--1 {
+      color: #8b54bb;
+    }
+    &--2 {
+      color: #fe5c5c;
+    }
+    &--3 {
+      color: #fddeac;
+    }
+  }
+}

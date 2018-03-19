@@ -1,0 +1,46 @@
+$colors: (
+  //TEXT
+  text: #fff,
+
+  //LINKS
+  links: lighten(#70cbce, 5%),
+  links-hover: #fff,
+
+  //BACKGROUND (body)
+  background: (
+    primary: #70cbce,
+    secondary: #136a8a
+  ),
+
+  //BUTTONS
+  buttons: (
+    primary: (
+      text: #000,
+      background: #fff,
+
+      text-hover: #000,
+      background-hover: darken(#fff, 5%)
+    ),
+    secondary: (
+      text: #fff,
+      background: #70cbce,
+
+      text-hover: #fff,
+      background-hover: lighten(#70cbce, 5%)
+    )
+  )
+);
+
+$breakpoints: (
+  //Landscape phone to portrait tablet: (min-width: 576px) and (max-width: 767px)
+  sm: 576px,
+
+  //Portrait tablet to landscape and desktop: (min-width: 768px) and (max-width: 991px)
+  md: 768px,
+
+  //Desktops and laptops: (min-width: 992px) and (max-width: 1199px)
+  lg: 992px,
+
+  //Large screens: (min-width: 1200px)
+  xl: 1200px
+);
